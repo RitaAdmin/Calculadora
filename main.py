@@ -37,14 +37,28 @@ if __name__ == "__main__":
             print('Calculadora')
             print('----------------------------------\n')
             print('1-Soma')
-            print('1-Subtração')
-            print('1-Multiplicação')
-            print('1-Divisão')
-            print('1-Exponencial')
+            print('2-Subtração')
+            print('3-Multiplicação')
+            print('4-Divisão')
+            print('5-Exponencial')
             print('0-Sair da calculadora')
             
+            escolha= input("Escolha uma opção: ")
             
+            if escolha=="0":
+                print("Sair programa com sucesso")
+                break
+            if escolha in("1","2","3","4","5"):
+            
+            else:
+                print("Opção nao é válida, numero não é correto")
+                continue
+        
+        try:
             num1 = float(input('Digite o primeiro número: '))
+            num2 = float(input('Digite o segundo número: '))
+            
+        
                         
         
 
