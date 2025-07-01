@@ -10,7 +10,17 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     result = float("nan")
     if operador == '+':
         result = num1 + num2
-
+    elif operador == '-':
+        result = num1 - num2
+    elif operador == '*':
+        result = num1 * num2
+    elif operador == '/':
+        result = num1 / num2
+        if num2!=0:
+            result=num1/num2
+        else:
+            raise ZeroDivisionError("Divisão por zero")
+        
     return result
 
 
@@ -21,7 +31,8 @@ if __name__ == "__main__":
         try:
             print('Calculadora')
             print('----------------------------------\n')
-
+            
+            
 
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
