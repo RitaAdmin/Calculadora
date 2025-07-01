@@ -20,7 +20,8 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
             result=num1/num2
         else:
             raise ZeroDivisionError("Divisão por zero")
-        
+    elif operador == '**':
+        result = num1 ** num2
     return result
 
 
@@ -31,8 +32,9 @@ if __name__ == "__main__":
         try:
             print('Calculadora')
             print('----------------------------------\n')
+            num1 = float(input('Digite o primeiro número: '))
             
-            
+
 
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
