@@ -19,9 +19,12 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
         if num2!=0:
             result=num1/num2
         else:
-            raise ZeroDivisionError("Divisão por zero")
+            raise ZeroDivisionError("Divisao por zero")
     elif operador == '**':
         result = num1 ** num2
+    else:
+        print("Operação inválida.")
+    
     return result
 
 
@@ -29,12 +32,17 @@ if __name__ == "__main__":
 
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
+        
+        
+        
+        
+        
         try:
             print('Calculadora')
             print('----------------------------------\n')
             num1 = float(input('Digite o primeiro número: '))
-            
-
+                        
+        
 
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
