@@ -19,7 +19,7 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
         if num2!=0:
             result=num1/num2
         else:
-            raise ZeroDivisionError("Divisao por zero")
+            raise ZeroDivisionError("Divisão por zero")
     elif operador == '**':
         result = num1 ** num2
     else:
@@ -32,14 +32,18 @@ if __name__ == "__main__":
 
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
-        
-        
-        
-        
-        
+         
         try:
             print('Calculadora')
             print('----------------------------------\n')
+            print('1-Soma')
+            print('1-Subtração')
+            print('1-Multiplicação')
+            print('1-Divisão')
+            print('1-Exponencial')
+            print('0-Sair da calculadora')
+            
+            
             num1 = float(input('Digite o primeiro número: '))
                         
         
