@@ -23,9 +23,8 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     elif operador == '**':
         result = num1 ** num2
     else:
-        print("Operação inválida.")
+        print("A operação não é válida.")
     
-    return result
 
 
 if __name__ == "__main__":
@@ -49,27 +48,32 @@ if __name__ == "__main__":
             break
         
         if escolha in("1","2","3","4","5"):
-            
-        else:
-            print("Opção nao é válida, numero não é correto")
-            continue
-        
-        try:
-            num1 = float(input('Digite o primeiro número: '))
-            num2 = float(input('Digite o segundo número: '))
-            continue
-            
-   
+            try:
+                num1 = float(input('Digite o primeiro número: '))
+                num2 = float(input('Digite o segundo número: '))
+                
+                if escolha == '1':
+                    opcao = '+'
+                elif escolha == '2':
+                    opcao = '-'
+                elif escolha == '3':
+                    opcao = '*'
+                elif escolha == '4':
+                    opcao = '/'
+                elif escolha == '5':
+                    opcao = '**'
+    
+    
+                resultado = calculadora(num1, num2, opcao)
+                print(f"\n Resultado é: {num1} {opcao}{num2}={resultado}")
         
                         
-        
-
             except ValueError:
                 print('Dados inválidos! -> Tente novamente!')
                 time.sleep(2)
 
-        except ZeroDivisionError:
-            print('Impossível dividir por zero! -> Tente novamente!')
-            time.sleep(2)
+            except ZeroDivisionError:
+                print('Impossível dividir por zero! -> Tente novamente!')
+                time.sleep(2)
 
-    print('\nVolte sempre!\n')
+        print('\nVolte sempre!\n')
