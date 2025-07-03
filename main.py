@@ -33,38 +33,40 @@ if __name__ == "__main__":
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
          
-        try:
-            print('Calculadora')
-            print('----------------------------------\n')
-            print('1-Soma')
-            print('2-Subtração')
-            print('3-Multiplicação')
-            print('4-Divisão')
-            print('5-Exponencial')
-            print('0-Sair da calculadora')
+        print('Calculadora')
+        print('----------------------------------\n')
+        print('1-Soma')
+        print('2-Subtração')
+        print('3-Multiplicação')
+        print('4-Divisão')
+        print('5-Exponencial')
+        print('0-Sair da calculadora')
             
-            escolha= input("Escolha uma opção: ")
+        escolha= input("Escolha uma opção: ")
             
-            if escolha=="0":
-                print("Sair programa com sucesso")
-                break
-            if escolha in("1","2","3","4","5"):
+        if escolha=="0":
+            print("Sair programa com sucesso")
+            break
+        
+        if escolha in("1","2","3","4","5"):
             
-            else:
-                print("Opção nao é válida, numero não é correto")
-                continue
+        else:
+            print("Opção nao é válida, numero não é correto")
+            continue
         
         try:
             num1 = float(input('Digite o primeiro número: '))
             num2 = float(input('Digite o segundo número: '))
+            continue
             
+   
         
                         
         
 
-        except ValueError:
-            print('Dados inválidos! -> Tente novamente!')
-            time.sleep(2)
+            except ValueError:
+                print('Dados inválidos! -> Tente novamente!')
+                time.sleep(2)
 
         except ZeroDivisionError:
             print('Impossível dividir por zero! -> Tente novamente!')
